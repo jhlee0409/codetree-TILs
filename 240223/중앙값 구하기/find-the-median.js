@@ -5,7 +5,12 @@ let temp;
 
 if(a > b) {
     if(a > c) {
-        temp = b
+        if(c > b) {
+            temp = c
+        } else {
+            temp = b
+        }
+        
     } else {
         temp = a 
     }
