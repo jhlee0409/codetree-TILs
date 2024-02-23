@@ -2,7 +2,7 @@ let fs = require('fs')
 let n = fs.readFileSync(0).toString().trim()
 
 if(+n % 3 === 0 || +n % 5 === 0 ){
-    console.log(1)
+    console.log('1')
 } else {
-    consle.log(0)
+    consle.log('0')
 }
