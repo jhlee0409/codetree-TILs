@@ -1,3 +1,13 @@
 let fs = require('fs')
 let n = fs.readFileSync(0).toString().trim()
-console.log(+n >= 3000 ? 'book' : 'mask')
+const r = () => {
+    if(+n >= 3000) {
+        return 'book'
+    } else if(+n >= 1000) {
+        return 'mask'
+    } else {
+        return 'no'
+    }
+}
+
+console.log(r())
