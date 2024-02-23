@@ -1,29 +1,30 @@
 let fs = require('fs')
 let [a, b, c] = fs.readFileSync(0).toString().split(' ').map(v=> +v)
 
-let temp = a
+let temp;
 
-if(temp > b) {
-    if(temp < c) {
-    }  else {
-        if(c < a) {
-            temp = c
+if(a > b) {
+    if(a > c) {
+        temp = b
+    } else {
+        if(c > b) {
+        temp = c
         } else {
-            temp = a
+            temp =b
         }
     }
 } else {
-    temp = b
-    if(temp < c) {
-
+    if(a > c) {
+        temp = a
     } else {
+        if(c > b) {
+            temp = b
+        } else  {
         temp = c
-        if(temp > a) {
-
-        } else {
-            temp = a
         }
     }
+    
 }
+
 
 console.log(temp)
