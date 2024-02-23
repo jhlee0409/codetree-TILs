@@ -7,11 +7,7 @@ if(a > b) {
     if(a > c) {
         temp = b
     } else {
-        if(c > b) {
-        temp = c
-        } else {
-            temp =b
-        }
+        temp = a 
     }
 } else {
     if(a > c) {
@@ -20,7 +16,7 @@ if(a > b) {
         if(c > b) {
             temp = b
         } else  {
-        temp = c
+            temp = c
         }
     }
     
