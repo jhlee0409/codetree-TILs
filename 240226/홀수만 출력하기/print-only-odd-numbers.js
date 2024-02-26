@@ -1,6 +1,6 @@
 let fs = require('fs')
 let arr = fs.readFileSync(0).toString().split('\n').map(v=> +v)
 
-const r = arr.reduce((acc,cur)=>  acc+= cur % 2 === 1 && cur % 3 === 0 ? `${cur}\n` : ''  ,'')
+const r = arr.filter(i=>i % 2 === 1 && i % 3 === 0)
 
-console.log(r)
+console.log([...(new Set(r))].join('\n'))
