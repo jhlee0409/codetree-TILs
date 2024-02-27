@@ -1,0 +1,6 @@
+let fs = require('fs')
+let arr = fs.readFileSync(0).toString().split('\n').map(v=>+v)
+let filtered = arr.filter(i => i > 0 && i <= 200)
+const sum = filtered.reduce((acc,cur)=> acc+=cur,0)
+const aver = (sum / filtered.length).toFixed(1)
+console.log(`${sum} ${aver}`)
