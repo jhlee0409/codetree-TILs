@@ -6,7 +6,7 @@ let n = 1;
 let r = input;
 
 while(true) {
-    r = r/n
+    r = Math.floor(r/n)
     if(r <= 1) {
         break
     }
