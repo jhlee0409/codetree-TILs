@@ -14,12 +14,10 @@ let result = ''
 
 
 for(const number of input) {
-    const hasStudent = !!students[number]
-    if(!hasStudent) {
-        result +='Vacancy'
-        break
+    result += (students[number] ?? 'Vacancy') + '\n'
+    if(result.includes('Vacancy')) {
+        break;
     }
-    result += students[number]+'\n'
 }
 
 console.log(result)
