@@ -2,13 +2,14 @@ const fs = require("fs");
 
 let input = +fs.readFileSync(0).toString().trim()
 
-let result = input
+let result = 0;
 
 while(true) {
-    if(result === 2) {
+    if(input === 2) {
         break;
     }
-    result /= 2
+    input /= 2
+    result +=2
 }
 
 console.log(result)
